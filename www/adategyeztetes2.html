@@ -1,0 +1,68 @@
+<div class="views">
+    <div class="pages navbar-fixed toolbar-fixed">
+        <div data-page="adategyeztetes" class="page">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">Adategyeztető űrlap</div>
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="content-block-title">Adategyeztetés</div>
+                <div class="content-block">
+                    Lehetőség van módosítania a saját nevét illetve az E-mail címét, amennyiben elírta vagy megváltozott
+                    az.<br>Kérjük, ha új E-mail címet kezd napi rendszerességgel használni, akkor módosítsa!
+                </div>
+                <form id="adategyeztetoForm" action="https://irinyi.cloud/varosifak/api/?action=Adategyeztetes"
+                      method="post">
+                    <div class="list-block">
+                        <ul>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><i class="glyphicon glyphicon-barcode"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input type="text" placeholder="Neptun kódod" name="neptun"
+                                                   readonly="readonly">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><i class="glyphicon glyphicon-user"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input type="text" name="name" placeholder="Teljes neved">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-media"><i class="glyphicon glyphicon-envelope"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-input">
+                                            <input type="text" name="email" placeholder="E-mail címed">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-100">
+                                <input type="submit" value="Mentés" id="adategyeztetoButton"
+                                       class="button button-big button-fill color-green"/>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <title>Városi Fák</title>
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+    <link rel="stylesheet" href="css/my-app.css">
+    <script type="text/javascript" src="jslibs/jquery-3.2.1.min.js"></script>
+</head>
+<body class="theme-green">
+<div class="statusbar-overlay"></div>
+<div class="panel-overlay"></div>
+<div class="panel panel-left panel-reveal">
+    <div class="content-block" id="left-block"></div>
+</div>
+<div class="views">
+    <div class="view view-main">
+        <div class="pages navbar-fixed toolbar-fixed">
+            <div data-page="loadingScreen" class="page">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="center">Városi fák vizsgálata</div>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <p style="text-align: center;"><img src="img/logo.png"/></p>
+                    <div class="row">
+                        <div class="col-20"></div>
+                        <div class="col-60">
+                            <p class="color-blue" id="loadingText" style="text-align: center">...</p>
+                        </div>
+                        <div class="col-20"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="jslibs/framework7.min.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/my-app.js"></script>
+<script type="text/javascript" src="js/nyitolap.js"></script>
+<script type="text/javascript" src="js/kapcsolat.js"></script>
+<script type="text/javascript" src="js/farogzites.js"></script>
+<script type="text/javascript" src="js/rogzitettfak.js"></script>
+<script type="text/javascript" src="js/dontesrefak.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoryS6QujYBMYspKnkMRb3bzGlyVtoGuY&callback=initMap">
+</script>
+</body>
+</html>

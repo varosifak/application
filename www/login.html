@@ -1,0 +1,73 @@
+<div class="views">
+    <div class="view">
+        <div class="pages navbar-fixed toolbar-fixed">
+            <div data-page="login" class="page">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="center">Bejelentkezés</div>
+                    </div>
+                </div>
+                <div class="page-content">
+                    <div class="content-block-title">Azonosítás szükséges</div>
+                    <div class="content-block">
+                        A továbblépéshez azonosítanod kell magad, hogy tudjuk jogosult vagy-e valóban az adott utcát
+                        kezelni.
+                    </div>
+                    <form id="loginForm" action="https://irinyi.cloud/varosifak/api/?action=Login" method="post">
+                        <div class="list-block">
+                            <ul>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">Neptun kód</div>
+                                            <div class="item-input">
+                                                <input type="text" name="neptun" placeholder="Írd be a Neptun kódod"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#" class="item-link smart-select" data-searchbar="true" data-back-text=""
+                                       data-searchbar-placeholder="Írja be az utca nevét"
+                                       data-page-title="Keresse meg, melyik utcát kapta" data-back-on-select="true">
+                                        <select name="szektorutca" id="szektorutca">
+                                            <option>Kérlek válassz</option>
+                                        </select>
+                                        <div class="item-content">
+                                            <div class="item-inner">
+                                                <div class="item-title">Utca neve</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="item-link smart-select"
+                                       data-page-title="Melyik félév adatbázisába szeretnél belépni?" data-back-text=""
+                                       data-back-on-select="true">
+                                        <select name="felev" id="felev">
+                                            <option>Kérlek válassz</option>
+                                        </select>
+                                        <div class="item-content">
+                                            <div class="item-inner">
+                                                <div class="item-title">Időszak</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content-block">
+                            <div class="row">
+                                <div class="col-100">
+                                    <input type="submit" value="Bejelentkezés" id="loginButton"
+                                           class="button button-big button-fill color-green"/>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

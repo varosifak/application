@@ -1,0 +1,1608 @@
+<div class="views">
+    <div class="pages navbar-fixed toolbar-fixed">
+        <div data-page="farogzites" class="page">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">Fa rögzítése</div>
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content" id="step_1">
+                <div class="content-block-title">Fa típusa</div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <label class="label-radio item-content">
+                                <!-- Checked by default -->
+                                <input type="radio" name="tipus" value="1" checked="checked">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Parkfa</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <!-- Checked by default -->
+                                <input type="radio" name="tipus" value="2">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Tuskó</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <!-- Checked by default -->
+                                <input type="radio" name="tipus" value="3">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Üres fahely</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <!-- Checked by default -->
+                                <input type="radio" name="tipus" value="4">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Kiszáradt fa</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <!-- Checked by default -->
+                                <input type="radio" name="tipus" value="5">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Megszűnt fahely</div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div id="faNev">
+                    <div class="content-block-title">Fa faj meghatározása</div>
+                    <div class="list-block">
+                        <ul>
+                            <li>
+                                <a href="#" class="item-link smart-select" data-searchbar="true" data-back-text=""
+                                   data-searchbar-placeholder="Milyen fa ez?"
+                                   data-page-title="Fák listája" data-back-on-select="true">
+                                    <select name="neve" id="neve">
+                                        <option>Kérlek válassz</option>
+                                    </select>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title">Magyar név</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-block">
+                    <div class="row">
+                        <div class="col-100" id="treeInformation" style="display: none;">
+                            <span id="faKepek" style="display: none;"><a href="#" class="button"
+                                                                         id="kepekAFarol"></a></span>
+                            <div class="content-block-title">Megjegyzések:</div>
+                            <div class="content-block">
+                                <span id="faLeiras"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="content-block nextButton" style="display: none;">
+                    <div class="row">
+                        <div class="col-100">
+                            <a href="#" class="button button-big button-fill color-green next">Tovább</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content" id="step_2" style="display: none;">
+                <div class="content-block-title">Elhelyezkedés</div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Utca</div>
+                                    <div class="item-input">
+                                        <input type="text" name="utcanev" placeholder="" readonly="readonly"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Házszám</div>
+                                    <div class="item-input">
+                                        <input type="text" name="hazszam" placeholder="Házszám"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="positionalas" style="display: none;">
+                    <div class="content-block-title">Pozíció</div>
+                    <div class="content-block">
+                        <div class="row">
+                            <div class="col-100">
+                                <a href="#" id="GPSPontositStart" class="button button-big button-fill color-green">Pozíció
+                                    meghatározása</a>
+                                <a href="#" id="GPSPontositStop" style="display: none;"
+                                   class="button button-big button-fill color-red">Pozícionálás megszakítása</a>
+                                <a href="#" id="GPSPontositNext" style="display: none;"
+                                   class="button button-big button-fill color-blue">Következő lépés</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="geolocation">
+                        <div class="list-block">
+                            <ul>
+                                <li style="display: none;">
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">Koordináták</div>
+                                            <div class="item-input">
+                                                <input type="text" name="koordinatak" placeholder="..."
+                                                       readonly="readonly"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-content">
+                                        <div class="item-inner">
+                                            <div class="item-title label">Pontosság</div>
+                                            <div class="item-input">
+                                                <input type="text" name="pontossag" placeholder="..."
+                                                       readonly="readonly"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="map-canvas"></div>
+            </div>
+            <div class="page-content" id="step_3" style="display: none;">
+                <div class="content-block-title">Fényképek a fáról</div>
+                <div class="content-block">
+                    <div class="content-block-inner">
+                        Készíts a fáról minimum 1, maximum 2 fényképet. A 2. fényképet csak indokolt esetben készítsd
+                        el!
+                        <hr>
+                        <div class="row">
+                            <div class="col-5"></div>
+                            <div class="col-45">
+                                <div class="photo" id="picture1"></div>
+                            </div>
+                            <div class="col-45">
+                                <div class="photo" id="picture2"></div>
+                            </div>
+                            <div class="col-5"></div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-100">
+                                <a href="#" id="nextSlideButton_3" class="button button-big button-fill color-green"
+                                   style="display: none;">Tovább</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content" id="step_4" style="display: none;">
+                <div class="content-block-title">Korona állapota</div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="korona_allapota" value="0">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Nincs, elhalt</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="korona_allapota" value="1">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Súlyosan sérült</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="korona_allapota" value="2">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Súlyosan sérült, menthető</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="korona_allapota" value="3">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Sérült</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="korona_allapota" value="4">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Enyhén sérült</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="korona_allapota" value="5">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Ép</div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block nextButton" style="display: none;">
+                    <div class="row">
+                        <div class="col-100">
+                            <a href="#" class="button button-big button-fill color-green next">Tovább</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content" id="step_5" style="display: none;">
+                <div class="content-block-title">Korona formája</div>
+                <div class="list-block" id="koronaFormaEgyebDIV" style="display: none;">
+                    <ul>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Korona formája</div>
+                                    <div class="item-input">
+                                        <input type="text" name="koronaforma_egyeb" placeholder="Milyen egyéb?">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <a href="#" id="nextSlideButton_5" class="button button-big button-fill color-green"
+                                   style="display: none;">Tovább</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="koronaforma" value="1">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Ellipszoid</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="koronaforma" value="2">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Gömb</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="koronaforma" value="3">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Kúp</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="koronaforma" value="4">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Oszlopos</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="koronaforma" value="5">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Szabálytalan</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="koronaforma" value="6">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Ernyős</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="koronaforma" value="7">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Sátorozó</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="koronaforma" value="8">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Csüngő</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="koronaforma" value="9">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Légvezeték miatt szabálytalanra nyírt</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="koronaforma" value="10">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Űrszelvény miatt szabálytalanra nyírt</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="koronaforma" value="11">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Egyéb</div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-content" id="step_6" style="display: none;">
+                <div class="content-block-title">Koronával kapcsolatos adatok</div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Korona sugara (m)</div>
+                                    <div class="item-input">
+                                        <input type="number" name="koronasugar" placeholder="Korona sugara">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content" id="miazazatmero">
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <center>
+                                            <img src="img/sugar.png">
+                                        </center>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Hiányzik a korona <b><span
+                                            id="hianyAKoronaban">0</span>%</b>-a
+                                    </div>
+                                    <div class="item-input">
+                                        <div class="range-slider">
+                                            <input type="range" name="koronaHiany" min="0" max="100" value="0" step="5">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Elhalt a korona <b><span
+                                            id="elhaltAKoronaban">0</span>%</b>-a
+                                    </div>
+                                    <div class="item-input">
+                                        <div class="range-slider">
+                                            <input type="range" name="koronaElhalt" min="0" max="100" value="0"
+                                                   step="5">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">A koronát <b><span id="fenyAKoronaban">0</span></b>
+                                        oldalról éri fény
+                                    </div>
+                                    <div class="item-input">
+                                        <div class="range-slider">
+                                            <input type="range" name="koronaFeny" min="0" max="5" value="0" step="1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <div class="content-block-inner">
+                        <div class="row">
+                            <div class="col-100">
+                                <a href="#" id="nextSlideButton_6" class="button button-big button-fill color-green"
+                                   style="display: none;">Tovább</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content" id="step_7" style="display: none;">
+                <div class="content-block-title">A koronában található...</div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="koronaban" value="11">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Száraz ág</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="koronaban" value="12">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Száraz vázág</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="koronaban" value="13">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Lehasadt ág</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="koronaban" value="14">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Ághelyi korhadás</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="koronaban" value="15">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Kezeletlen ághely</div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <div class="content-block-inner">
+                        <div class="row">
+                            <div class="col-100">
+                                <a href="#" id="nextSlideButton_7" class="button button-big button-fill color-green">Tovább</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content" id="step_8" style="display: none;">
+                <div class="content-block-title">A koronáalapban...</div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="koronaalapnal" value="21">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Korhadás</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="koronaalapnal" value="22">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Odú</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="koronaalapnal" value="23">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Sérülés</div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <div class="content-block-inner">
+                        <div class="row">
+                            <div class="col-100">
+                                <a href="#" id="nextSlideButton_8" class="button button-big button-fill color-green">Tovább</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content" id="step_9" style="display: none;">
+                <div class="content-block-title">A törzs állapota</div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="torzs_allapota" value="0">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Nincs, elhalt</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="torzs_allapota" value="1">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Súlyosan sérült</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="torzs_allapota" value="2">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Súlyosan sérült, menthető</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="torzs_allapota" value="3">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Sérült</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="torzs_allapota" value="4">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Enyhén sérült</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="torzs_allapota" value="5">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Ép</div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-content" id="step_10" style="display: none;">
+                <div class="content-block-title">A fa törzsét illetően...</div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="torzsSzama" value="1">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">1 törzse van</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="torzsSzama" value="2">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">2 törzse van</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="torzsSzama" value="3">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">3 vagy annál több törzse van</div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <div class="item-content" id="torzsMagassag">
+                                <div class="item-inner">
+                                    <div class="item-title label">A törzs magassága (m)</div>
+                                    <div class="item-input">
+                                        <input type="number" name="torzsMagassag"
+                                               placeholder="Törzs magassága méterben">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content" id="torzsAlul">
+                                <div class="item-inner">
+                                    <div class="item-title label">A törzs kerülete alul (cm)</div>
+                                    <div class="item-input">
+                                        <input type="number" name="torzsAlul" placeholder="Törzs kerülete legalul">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content" id="torzsAtmero1" style="display: none;">
+                                <div class="item-inner">
+                                    <div class="item-title label">A legvastagabb törzs kerülete (cm)</div>
+                                    <div class="item-input">
+                                        <input type="number" name="torzs1Kerulet"
+                                               placeholder="Legvastagabb törzs kerülete">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content" id="torzsAtmero2" style="display: none;">
+                                <div class="item-inner">
+                                    <div class="item-title label">A 2. legvastagabb törzs kerülete (cm)</div>
+                                    <div class="item-input">
+                                        <input type="number" name="torzs2Kerulet"
+                                               placeholder="2. legvastagabb törzs kerülete">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content" id="torzsAtmero3" style="display: none;">
+                                <div class="item-inner">
+                                    <div class="item-title label">A 3. legvastagabb törzs kerülete (cm)</div>
+                                    <div class="item-input">
+                                        <input type="number" name="torzs3Kerulet"
+                                               placeholder="3. legvastagabb törzs kerülete">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <div class="content-block-inner">
+                        <div class="row">
+                            <div class="col-100">
+                                <a href="#" id="nextSlideButton_9" class="button button-big button-fill color-green"
+                                   style="display: none;">Tovább</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content" id="step_11" style="display: none;">
+                <div class="content-block-title">A törzsön található...</div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="torzson" value="31">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Korhadás</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="torzson" value="32">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Odú</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="torzson" value="33">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Sérülés</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="torzson" value="34">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Sarj</div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block-title">A gyökérnyakon...</div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="gyokernyakon" value="41">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Korhadás</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="gyokernyakon" value="42">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Odú</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="gyokernyakon" value="43">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Sérülés</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="gyokernyakon" value="44">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Sarj</div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <div class="content-block-inner">
+                        <div class="row">
+                            <div class="col-100">
+                                <a href="#" id="nextSlideButton_11" class="button button-big button-fill color-green">Tovább</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content" id="step_12" style="display: none;">
+                <div class="content-block-title">A fára jellemzőek:</div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="egyeb" value="51">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Ifjított</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="egyeb" value="52">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Tőtől ágas</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="egyeb" value="53">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Alánőtt fa</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="egyeb" value="54">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Külpontos</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="egyeb" value="55">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Dőlt törzs</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="egyeb" value="56">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Borostyán</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="egyeb" value="57">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Fagyöngy</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="egyeb" value="58">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Ránőtt</div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <div class="content-block-inner">
+                        <div class="row">
+                            <div class="col-100">
+                                <a href="#" id="nextSlideButton_12" class="button button-big button-fill color-green">Tovább</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content" id="step_13" style="display: none;">
+                <div class="content-block-title">Fa helyének anyaga:</div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="faHelyJellemzo" value="1">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Aszfalttal, betonnal körbevett</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="faHelyJellemzo" value="2">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Föld, gyep</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="faHelyJellemzo" value="3">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Faveremrács (Térkő/díszburkolattal körbevéve</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="faHelyJellemzo" value="4">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Föld, cserje</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="faHelyJellemzo" value="5">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Föld, mulcs</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="faHelyJellemzo" value="6">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Egyéb...</div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-block">
+                    <ul>
+                        <li style="display: none;" id="faHelyJellemzoEgyebDiv">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Egyéb:</div>
+                                    <div class="item-input">
+                                        <input type="text" name="faHelyJellemzoEgyeb" placeholder="Milyen egyéb?">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li style="display: none;" id="faHelyJellemzoFaveremracsDiv">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Faveremrács belső átmérője (m):</div>
+                                    <div class="item-input">
+                                        <input type="number" name="faHelyJellemzoFaveremracsAtmero"
+                                               placeholder="Mekkora a belső átmérője?">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Fa helyének mérete (m)</div>
+                                    <div class="item-input">
+                                        <input type="number" name="faHelyMeret"
+                                               placeholder="Mekkora szabad tére van a fának?">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-block">
+                    <div class="content-block-inner">
+                        <div class="row">
+                            <div class="col-100">
+                                <a href="#" id="nextSlideButton_13" class="button button-big button-fill color-green"
+                                   style="display: none;">Tovább</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content" id="step_14" style="display: none;">
+                <div class="content-block-title">Favédelem:</div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="favedelem" value="11">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Nincs</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="favedelem" value="1">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Támrúd</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="favedelem" value="2">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Rács</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="favedelem" value="3">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Keret</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="favedelem" value="4">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Kerítés</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="favedelem" value="5">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Oszlop, poller</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="favedelem" value="6">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Lánc</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="favedelem" value="7">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Hirdetőtábla</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="favedelem" value="10">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Egyéni védelem</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-radio item-content">
+                                <input type="radio" name="favedelem" value="12">
+                                <div class="item-media">
+                                    <i class="icon icon-form-radio"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Egyéb</div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-content" id="step_15" style="display: none;">
+                <div class="content-block-title">Közművek:</div>
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="kozmuvek" value="1">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Elektromos közvilágítás</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="kozmuvek" value="2">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Szabad légvezeték</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="kozmuvek" value="3">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Burkolt légvezeték</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="kozmuvek" value="4">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Gáz</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="kozmuvek" value="5">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Távközlés</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="kozmuvek" value="6">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">KRESZ-tábla</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="kozmuvek" value="7">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Víz</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="kozmuvek" value="8">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Űrszelvény</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="kozmuvek" value="9">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Tűzcsap</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="kozmuvek" value="10">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Csatorna</div>
+                                </div>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="kozmuvek" value="11">
+                                <div class="item-media">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">Távhű</div>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content-block">
+                    <div class="content-block-inner">
+                        <div class="row">
+                            <div class="col-100">
+                                <a href="#" id="nextSlideButton_15" class="button button-big button-fill color-green">Tovább</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content" id="step_16" style="display: none;">
+                <div class="list-block">
+                    <ul>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">A fa élő magassága becsülve, kerekítve (m)</div>
+                                    <div class="item-input">
+                                        <input type="number" name="magassag" placeholder="Fa magassága">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">A fa holt magassága becsülve, kerekítve (m)</div>
+                                    <div class="item-input">
+                                        <input type="number" name="holtmagassag" placeholder="Fa holtmagassága">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="content-block" style="display: none;" id="nextB16">
+                    <div class="content-block-inner">
+                        <div class="row">
+                            <div class="col-100">
+                                <a href="#" id="nextSlideButton_16" class="button button-big button-fill color-green">Tovább</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="faallapotaDiv" style="display: none;">
+                    <div class="content-block-title">A fa állapota</div>
+                    <div class="list-block">
+                        <ul>
+                            <li>
+                                <label class="label-radio item-content">
+                                    <input type="radio" name="fa_allapota" value="1">
+                                    <div class="item-media">
+                                        <i class="icon icon-form-radio"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Elhanyagolt</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="label-radio item-content">
+                                    <input type="radio" name="fa_allapota" value="2">
+                                    <div class="item-media">
+                                        <i class="icon icon-form-radio"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Súlyos ápolási hiányosságok</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="label-radio item-content">
+                                    <input type="radio" name="fa_allapota" value="3">
+                                    <div class="item-media">
+                                        <i class="icon icon-form-radio"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Ápolási hiányosságok</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="label-radio item-content">
+                                    <input type="radio" name="fa_allapota" value="4">
+                                    <div class="item-media">
+                                        <i class="icon icon-form-radio"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Ápolt</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="label-radio item-content">
+                                    <input type="radio" name="fa_allapota" value="5">
+                                    <div class="item-media">
+                                        <i class="icon icon-form-radio"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Optimálisan ápolt</div>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content" id="step_17" style="display: none;">
+                <div id="javasoltDiv">
+                    <div class="content-block-title">Javasolt munkák:</div>
+                    <div class="list-block javmunka">
+                        <ul>
+                            <li>
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="javasolt" value="1">
+                                    <div class="item-media">
+                                        <i class="icon icon-form-checkbox"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Gallyazás</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="javasolt" value="2">
+                                    <div class="item-media">
+                                        <i class="icon icon-form-checkbox"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Ifjítás</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="javasolt" value="3">
+                                    <div class="item-media">
+                                        <i class="icon icon-form-checkbox"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Odúkezelés</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="javasolt" value="4">
+                                    <div class="item-media">
+                                        <i class="icon icon-form-checkbox"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Sebkezelés</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="javasolt" value="5">
+                                    <div class="item-media">
+                                        <i class="icon icon-form-checkbox"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Sarjazás</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="javasolt" value="6">
+                                    <div class="item-media">
+                                        <i class="icon icon-form-checkbox"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Kivágás</div>
+                                    </div>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="label-checkbox item-content">
+                                    <input type="checkbox" name="javasolt" value="7">
+                                    <div class="item-media">
+                                        <i class="icon icon-form-checkbox"></i>
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title">Tuskóírtás</div>
+                                    </div>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-block">
+                    <div class="content-block-inner" id="readyFullDone">
+                        <a href="#" id="readyAndPiszkozat" class="button button-big button-fill color-orange" style="display: none;">Beküldés fa fajta meghatározásra</a>
+                        <a href="#" id="readyAndSend" class="button button-big button-fill color-green" style="display: none;">Beküldés</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

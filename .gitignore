@@ -1,0 +1,11 @@
+.idea
+*.log
+platforms/*
+!platforms/platforms.json
+plugins/*
+!plugins/fetch.json
+*.apk
+node_modules
+package-lock.json
+tools
+tools.zip
